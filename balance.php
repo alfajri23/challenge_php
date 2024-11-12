@@ -21,9 +21,9 @@ if(!isset($_SESSION['user'][$_SESSION['username']])){
 <body>
 
 <div>
-    Saldo Kamu : <?= $_SESSION['user'][$_SESSION['username']] ?>
+    Your Balance : <?= $_SESSION['user'][$_SESSION['username']] ?>
 </div>
-<a href="home.php">Kembali</a>
+<a href="home.php">Back</a>
     
 </body>
 </html>

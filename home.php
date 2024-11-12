@@ -15,22 +15,28 @@ if (!isset($_SESSION['is_login'])) {
 </head>
 <body>
 
+    
+
     <div>
-        <a href="balance.php">
-            Saldo
-        </a>
-        <span> - </span>
-        <a href="transaksi.php">
-            Transaksi
-        </a>
-        <span> - </span>
-        <a href="controller/logout.php">
-            Logout
-        </a>
-        <span> - </span>
-        <a href="controller/delete.php">
-            Destroy
-        </a>
+        <div>
+            <a href="balance.php">
+                Check Balance
+            </a>
+            <span> - </span>
+            <a href="transaksi.php">
+                Transaksi
+            </a>
+            <span> - </span>
+            <a href="controller/logout.php">
+                Logout
+            </a>
+            <span> - </span>
+            <!-- <a href="controller/delete.php">
+                Destroy
+            </a> -->
+        </div>
+
+        <h1><?=$_SESSION['username']?></h1>
 
         <?php
             if(isset($_GET['error'])){

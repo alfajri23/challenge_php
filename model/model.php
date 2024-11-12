@@ -52,6 +52,9 @@ class Controller{
         }else if($no < 1){
             header("Location: ../home.php?error=input");  
             exit;
+        }else if($to == null || $to == ''){
+            header("Location: ../home.php?error=input");  
+            exit;
         }
         
         // Keluar
