@@ -41,8 +41,9 @@ if (!isset($_SESSION['username'])) {
         <th>Time</th>
         <th>Tipe</th>
         <th>Debit</th>
-        <th>credit</th>
-        <th>balance</th>
+        <th>Credit</th>
+        <th>Balance</th>
+        <th>Description</th>
     </tr>
     <?php
         $no = 1;
@@ -61,6 +62,7 @@ if (!isset($_SESSION['username'])) {
             <td><?php echo $y['debit'] ?></td>
             <td><?php echo $y['credit'] ?></td>
             <td><?php echo $y['balance'] ?></td>
+            <td><?php echo $y['description'] ?></td>
 	</tr>
     <?php 
             }}}

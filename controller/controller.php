@@ -15,6 +15,11 @@ if($aksi == 'deposit'){
     $value = $_POST['value'];
     $action->withdraw($value);
     header("Location: ../home.php");  
+}else if($aksi == 'transfer'){
+    $value = $_POST['value'];
+    $nama = $_POST['nama'];
+    $action->transfer($nama,$value);
+    header("Location: ../home.php");  
 }
 
 

@@ -46,17 +46,38 @@ if (!isset($_SESSION['is_login'])) {
             }
         ?>
 
-        <div>
+        <div style="margin: 20px 0">
             <form action="controller/controller.php?aksi=withdraw" method="post">
                 <input type="text" name="value">
                 <button type="submit">Withdraw</button>
             </form>
         </div>
 
-        <div>
+        <div style="margin: 10px 0">
             <form action="controller/controller.php?aksi=deposit" method="post">
                 <input type="text" name="value">
                 <button type="submit">Deposit</button>
+            </form>
+        </div>
+
+        <br>
+        <div style="margin: 10px 0">
+            <form action="controller/controller.php?aksi=transfer" method="post">
+                <label for="">Nama penerima</label>
+                <select name="nama">
+                <?php
+                foreach($_SESSION['user'] as $user => $value){
+                    if($user != $_SESSION['username']){
+                ?>
+                <option value="<?=$user?>"><?=$user?></option>
+                <?php
+                }}
+                ?>
+                </select>
+                <br>
+                <label for="">Nominal</label>
+                <input type="text" name="value">
+                <button type="submit">Transfer</button>
             </form>
         </div>
    
